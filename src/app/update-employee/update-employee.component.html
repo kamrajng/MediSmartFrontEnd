@@ -1,0 +1,87 @@
+<div class="body">
+    <section class="registration-page">
+        <form class="form" (ngSubmit)="onSubmit()">
+            <div class="form-header">
+                <h1>Update Employee</h1>
+            </div>
+            <div class="form-body">
+                <div class="row">
+                    <div class="input-group">
+                        <label>First name </label>
+                        <input type="text" [(ngModel)]="employee.firstName" name="firstName" placholder="Enter your first name" />
+                    </div>
+                    <div class="input-group">
+                        <label>Last name</label>
+                        <input type="text" [(ngModel)]="employee.lastName" name="lastName" placholder="Enter your last name" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Email </label>
+                        <input type="email" [(ngModel)]="employee.email" name="email" placholder="Enter your email address" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="text" [(ngModel)]="employee.phone" name="phone" placholder="Enter your password again" />
+                    </div>
+                    <div class="input-group">
+                        <label>Gender </label>
+                        <select [(ngModel)]="employee.gender" name="gender" id="">
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label>Age</label>
+                        <input type="number" [(ngModel)]="employee.age" name="age" />
+                    </div>
+                    <div class="input-group">
+                        <label for="">Status</label>
+                        <select [(ngModel)]="employee.status" name="status" id="">
+              <option value="Full Time Staff">Full-Time</option>
+              <option value="Contract Staff">Contract Staff</option>
+              <option value="Part Time Staff">Part Time Staff</option>
+            </select>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-group">
+                        <label for="">Address</label>
+                        <input type="text" [(ngModel)]="employee.address" name="address" placeholder="enter address">
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="">Qualification</label>
+                        <select [(ngModel)]="employee.edu" name="edu" id="">
+                            <option value="School Cert">School Cert</option>
+                            <option value="Diploma">Diploma</option>
+                            <option value="Bachelor Degree">Bachelor Degree</option>
+                            <option value="Certification">Certification</option>
+                            <option value="Master">Master</option>
+                            <option value="Doctoral">Doctoral</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-group">
+                        <label for="">Bio</label>
+                        <textarea [(ngModel)]="employee.bio" name="bio" placeholder="enter litle of your bio">
+            </textarea>
+                    </div>
+                </div>
+            </div>
+            <div class="form-footer">
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+        </form>
+    </section>
+</div>

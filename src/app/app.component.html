@@ -1,0 +1,77 @@
+<nav
+  class="menu_header"
+  style="
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 70px;
+    box-shadow: 8px 8px 2px 1px rgba(0, 0, 255, 0.2);
+  "
+>
+  <div style="margin-left: 10%">
+    <img
+      src="https://medismarts.com.ng/wp-content/uploads/thegem-logos/logo_00a12dae7d03a9f8ae4efe27c78b1f5c_1x.png"
+      alt=""
+    />
+  </div>
+  <div
+    class=" "
+    style="display: flex; justify-content: space-between; margin-right: 10%"
+  >
+    <span class=" ">
+      <a
+        [routerLink]="['employees']"
+        class="nav-link"
+        routerLinkActive="active "
+        >Employee List</a
+      >
+    </span>
+    <span class=" ">
+      <a [routerLink]="['add']" class="nav-link" routerLinkActive="active "
+        >Add Employee</a
+      >
+    </span>
+  </div>
+</nav>
+
+<div class="body" style="padding-top: 80px; margin: auto 10%; height: 100vh">
+  <h2
+    style="
+      text-align: center;
+      margin: 5px auto;
+      font-weight: 600;
+      margin-top: 20px;
+    "
+  >
+    {{ title }}
+  </h2>
+
+  <div class=" ">
+    <div class=" ">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer
+  class="menu-footer"
+  style="
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    bottom: 0;
+    width: 100vw;
+    margin-top: 100px;
+    height: 70px;
+  "
+>
+  <div class=" ">
+    <span>Kamrajng 2023 @meditest</span>
+  </div>
+</footer>

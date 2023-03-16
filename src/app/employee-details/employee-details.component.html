@@ -1,0 +1,48 @@
+<div class="body">
+  <section class="registration-page">
+    <div class="form">
+      <div class="form-header">
+        <h1>Employee Details</h1>
+      </div>
+
+      <div class="form-body" *ngIf="employee">
+        <div>
+          <label><b>Staff Id: </b></label> {{ employee.id }}
+        </div>
+        <div>
+          <label><b>Full Name: </b></label> {{ employee.firstName }}
+          {{ employee.lastName }}
+        </div>
+        <div>
+          <label><b>Email: </b></label> {{ employee.email }}
+        </div>
+        <div>
+          <label><b>Phone Number: </b></label> {{ employee.phone }}
+        </div>
+        <div>
+          <label><b>Address: </b></label> {{ employee.address }}
+        </div>
+        <div>
+          <label><b>Age: </b></label> {{ employee.age }} year old
+        </div>
+        <div>
+          <label><b>Gender: </b></label> {{ employee.gender }}
+        </div>
+        <div>
+          <label><b>Qualification: </b></label> {{ employee.edu }}
+        </div>
+        <div>
+          <label><b>Status: </b></label> {{ employee.status }}
+        </div>
+        <div>
+          <label><b>Biography: </b></label> {{ employee.bio }}
+        </div>
+      </div>
+      <div class="form-footer">
+        <button (click)="list()" class="btn btn-primary">
+          Back to Employee List
+        </button>
+      </div>
+    </div>
+  </section>
+</div>
